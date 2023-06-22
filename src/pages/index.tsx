@@ -38,11 +38,6 @@ const Home = () => {
     [-1, 1],
   ];
 
-  function getrandom(mn: number, mx: number) {
-    const random = Math.floor(Math.random() * (mx + 1 - mn) + mn);
-    return random;
-  }
-
   const newUserInputs: (0 | 1 | 2 | 3)[][] = JSON.parse(JSON.stringify(userInputs));
 
   const board: number[][] = [];
@@ -64,19 +59,6 @@ const Home = () => {
       }
     }
   };
-  
-
-  function count_userinputs(a: number) {
-    let num = 0;
-    for (let y = 0; y <= 8; y++) {
-      for (let x = 0; x <= 8; x++) {
-        if (userInputs[y][x] === a) {
-          num += 1;
-        }
-      }
-    }
-    return num;
-  }
 
   const startNewGame = () => {
     setUserInputs;
@@ -95,27 +77,7 @@ const Home = () => {
       startNewGame[y][x];
     }
   };
-
-  function count_bombmap(a: number) {
-    let num = 0;
-    for (let y = 0; y <= 8; y++) {
-      for (let x = 0; x <= 8; x++) {
-        if (bombMap[y][x] === a) {
-          num++;
-        }
-      }
-    }
-    return num;
-  }
-
-  while (Number(count_userinputs(1)) === 1 && Number(count_bombmap(1)) < 10) {
-    const decidey = getrandom(0, 8);
-    const decidex = getrandom(0, 8);
-    if (userInputs[decidey][decidex] !== 1) {
-      bombMap[decidey][decidex] = 1;
-    }
-    setBombMap(bombMap);
-  }
+  
 
   <div className='ab sprite'>  </div>
 
