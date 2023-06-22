@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './index.module.css';
+import styles from '../index.module.css';
 
 const Home = () => {
   const [userInputs, setUserInputs] = useState<(0 | 1 | 2 | 3)[][]>([
