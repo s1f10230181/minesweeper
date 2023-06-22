@@ -77,9 +77,8 @@ const Home = () => {
       startNewGame[y][x];
     }
   };
-  
 
-  <div className='ab sprite'>  </div>
+  <div className="ab sprite"> </div>;
 
   return (
     <div className={styles.container}>
