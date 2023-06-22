@@ -17,6 +17,14 @@
   padding: 5rem 0;
 }
 
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  height: 270px;
+  width: 270px;
+  background-color: #515151;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -63,6 +71,15 @@
     'Bitstream Vera Sans Mono', 'Courier New', monospace;
   font-size: 1.1rem;
   border-radius: 5px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  width: 30px;
+  height: 30px;
 }
 
 .grid {
@@ -120,4 +137,12 @@
   width: 30px;
   height: 30px;
   background: url('~/assets/images/icons.png') repeat;
+}
+
+.sprite {
+  background: url('~/assets/images/icons.png') no-repeat;
+}
+
+.ab {
+  background-position: 1px 1px;
 }
