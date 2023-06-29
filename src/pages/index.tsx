@@ -71,11 +71,6 @@ const Home = () => {
       newUserInputs[y][x] = 1;
     }
     setUserInputs(newUserInputs);
-    // if (userInputs[y][x] === 1) {
-    // }
-    // if (isFailure === true) {
-    //   startNewGame[y][x];
-    // }
   };
 
   <div className="ab sprite"> </div>;
